@@ -33,9 +33,18 @@ const tagsView = {
       }
     },
     DEL_OTHERS_VIEWS: (state, view) => {
+      //首页不能删除
+      let indexTag = {};
       for (const [i, v] of state.visitedViews.entries()) {
+        if(v.title ==="首页"){
+          indexTag = state.visitedViews.slice(i, i + 1);
+        }
         if (v.path === view.path) {
-          state.visitedViews = state.visitedViews.slice(i, i + 1);
+          let currentTag = state.visitedViews.slice(i, i + 1);
+          state.visitedViews = indexTag;
+          if(v.title !="首页"){
+            state.visitedViews.push(currentTag[0]);
+          }
           break
         }
       }
