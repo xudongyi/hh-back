@@ -15,15 +15,8 @@
       >
       </el-table-column>
       <el-table-column
-        prop="NICKNAME"
-        label="微信昵称"
-          align="center"
-        show-overflow-tooltip
-      >
-      </el-table-column>
-      <el-table-column
         prop="USER_NAME"
-        label="姓名"
+        label="真实姓名"
           align="center"
         show-overflow-tooltip
       >
@@ -50,43 +43,6 @@
         width="160"
         show-overflow-tooltip
       >
-      </el-table-column>
-      <el-table-column
-        :formatter="formatterTime"
-        prop="SUBSCRIBE_TIME"
-        label="关注时间"
-        align="center"
-        show-overflow-tooltip
-        width="160">
-      </el-table-column>
-      <el-table-column
-        prop="QRCODE"
-        label="推荐编码"
-        align="center"
-        width="130"
-        show-overflow-tooltip
-      >
-      </el-table-column>
-      <el-table-column
-        label="加盟"
-        align="center"
-      >
-        <el-table-column v-for="(el,index) in brandList"
-                         :prop="'jiameng_'+el.id"
-                         align="center"
-                         :label="el.brandName">
-        </el-table-column>
-
-      </el-table-column>
-      <el-table-column
-        label="代理"
-        align="center"
-      >
-        <el-table-column v-for="(el,index) in brandList"
-                         :prop="'agent_'+el.id"
-                         align="center"
-                         :label="el.brandName">
-        </el-table-column>
       </el-table-column>
     </el-table>
     <el-pagination

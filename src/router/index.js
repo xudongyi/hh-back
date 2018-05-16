@@ -70,194 +70,7 @@ export const asyncRouterMap = [
         icon: 'lock',
         roles: ['admin']
       }
-    },
-      {
-        path: 'angelApply',
-        component: _import('user/angelApply'),
-        name: 'angelApply',
-        meta: {
-          title: '代理商审核',
-          icon: 'lock',
-          roles: ['admin']
-        },
-      },
-      {
-        path: 'jiamengApply',
-        component: _import('user/jiamengApply'),
-        name: 'jiamengApply',
-        meta: {
-          title: '加盟商审核',
-          icon: 'lock',
-          roles: ['admin']
-        }
-      }
-    ]
-  },
-  {
-    path: '/goods',
-    component: Layout,
-    redirect: 'noredirect',
-    meta: {
-      title: '商品管理',
-      icon: 'component',
-      roles: ['admin']
-    },
-    children: [{
-      path: 'store',
-      component: _import('goods/store'),
-      name: 'store',
-      meta: {
-        title: '库存管理',
-        icon: 'lock',
-        roles: ['admin']
-      }
-    },
-      {
-        path: 'storeIn',
-        component: _import('goods/storeIn'),
-        name: 'storeIn',
-        meta: {
-          title: '入库',
-          icon: 'lock',
-          roles: ['admin']
-        },
-        hidden: true
-      },
-      {
-        path: 'storeOut',
-        component: _import('goods/storeOut'),
-        name: 'storeOut',
-        meta: {
-          title: '出库',
-          icon: 'lock',
-          roles: ['admin']
-        },
-        hidden: true
-      },
-      {
-        path: 'storeDetail',
-        component: _import('goods/storeDetail'),
-        name: 'storeDetail',
-        meta: {
-          title: '库存变动',
-          icon: 'lock',
-          roles: ['admin']
-        },
-        hidden: true
-      },
-      {
-        path: 'goods',
-        component: _import('goods/goods'),
-        name: 'goods',
-        meta: {
-          title: '商品管理',
-          icon: 'lock',
-          roles: ['admin']
-        }
-      },
-      {
-        path: 'brand',
-        component: _import('goods/brand'),
-        name: 'brand',
-        meta: {
-          title: '品牌管理',
-          icon: 'lock',
-          roles: ['admin']
-        }
-      }
-    ]
-  },
-  {
-    path: '/sale',
-    component: Layout,
-    redirect: 'noredirect',
-    meta: {
-      title: '销售管理',
-      icon: 'component',
-      roles: ['admin']
-    },
-    children: [{
-      path: 'order',
-      component: _import('sale/order'),
-      name: 'order',
-      meta: {
-        title: '订单管理',
-        icon: 'lock',
-        roles: ['admin']
-      }
-    },
-      {
-        path: 'statistics',
-        component: _import('sale/statistics'),
-        name: 'statistics',
-        meta: {
-          title: '销售统计',
-          icon: 'lock',
-          roles: ['admin']
-        }
-      },
-      {
-        path: 'orderDetail',
-        component: _import('sale/orderDetail'),
-        name: 'orderDetail',
-        meta: {
-          title: '订单详情',
-          icon: 'lock',
-          roles: ['admin']
-        },
-        hidden:true
-      }
-    ]
-  },
-  {
-    path: '/settle',
-    component: Layout,
-    redirect: 'noredirect',
-    meta: {
-      title: '结算管理',
-      icon: 'component',
-      roles: ['admin']
-    },
-    children: [{
-      path: 'settle',
-      component: _import('settle/settle'),
-      name: 'settle',
-      meta: {
-        title: '结算管理',
-        icon: 'lock',
-        roles: ['admin']
-      }
-    },
-      {
-        path: 'agentBack',
-        component: _import('settle/agentBack'),
-        name: 'agentBack',
-        meta: {
-          title: '代理返利',
-          icon: 'lock',
-          roles: ['admin']
-        }
-      },
-      {
-        path: 'recommendBack',
-        component: _import('settle/recommendBack'),
-        name: 'recommendBack',
-        meta: {
-          title: '推荐返利',
-          icon: 'lock',
-          roles: ['admin']
-        }
-      },
-      {
-        path: 'moneyStatistic',
-        component: _import('settle/moneyStatistic'),
-        name: 'moneyStatistic',
-        meta: {
-          title: '财务月报',
-          icon: 'lock',
-          roles: ['admin']
-        }
-      }
+    }
     ]
   },
   {
@@ -267,7 +80,7 @@ export const asyncRouterMap = [
     meta: {
       title: '系统设置',
       icon: 'component',
-      roles: ['admin']
+      roles: ['admin','store']
     },
     children: [{
       path: 'platform',
@@ -276,16 +89,7 @@ export const asyncRouterMap = [
       meta: {
         title: '平台设置',
         icon: 'lock',
-        roles: ['admin']
-      }
-    },{
-      path: 'menu',
-      component: _import('system/menu'),
-      name: 'menu',
-      meta: {
-        title: '微信菜单',
-        icon: 'lock',
-        roles: ['admin']
+        roles: ['admin','store']
       }
     }
     ]
